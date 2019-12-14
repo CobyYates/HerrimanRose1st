@@ -3,7 +3,7 @@
     <v-row align="center" justify="center">
       <v-img src="../assets/hero.jpg" lazy-src="../assets/hero.jpg">
         <div class="d-flex justify-end pr-3">
-          <img-title class="title">Photo By: Michael Nyiri</img-title>
+          <img-title class="title"><a class="white--text" href="https://www.flickr.com/photos/baldmike2012" target="_blank">Photo By: Michael Nyiri</a></img-title>
         </div>
       </v-img>
     </v-row>
@@ -17,10 +17,10 @@
         <h3>Members who have indexed this year</h3>
         <v-progress-circular
           :rotate="-90"
-          :size="100"
-          :width="15"
-          :value="0"
-          color="teal"
+          :size="150"
+          :width="20"
+          :value="30"
+          color="blue lighten-1"
         >
           {{ goal1 }}
         </v-progress-circular>
@@ -29,32 +29,32 @@
         <h3>Number of records indexed</h3>
         <v-progress-circular
           :rotate="-90"
-          :size="200"
+          :size="150"
           :width="20"
-          :value="0"
-          color="teal"
+          :value="20"
+          color="blue lighten-1"
         >
           {{ goal2 }}
         </v-progress-circular>
       </v-col>
       <v-col class="d-flex flex-column align-center">
-        <h3>Members who have indexed this year</h3>
+        <h3>Goal 3</h3>
         <v-progress-circular
           :rotate="-90"
-          :size="100"
-          :width="15"
-          :value="0"
-          color="teal"
+          :size="150"
+          :width="20"
+          :value="10"
+          color="blue lighten-1"
         >
           {{ goal3 }}
         </v-progress-circular>
       </v-col>
     </v-row>
-    <v-row>
+    <v-row class="pb-12">
       <v-col>
         <v-card class="mx-auto" max-width="344">
           <v-card-text>
-            <div>Goal 1</div>
+            <div><p class="blue--text">Goal 1</p></div>
             <p class="display-1 text--primary">
               Individual Indexing
             </p>
@@ -63,7 +63,7 @@
             </div>
           </v-card-text>
           <v-card-actions>
-            <v-btn text color="deep-purple accent-4">
+            <v-btn text color="blue lighten-1">
               Learn More <!-- Link to how to page -->
             </v-btn>
           </v-card-actions>
@@ -72,7 +72,7 @@
       <v-col>
         <v-card class="mx-auto" max-width="344">
           <v-card-text>
-            <div>Goal 2</div>
+            <div><p class="blue--text">Goal 2</p></div>
             <p class="display-1 text--primary">
               Ward Indexing
             </p>
@@ -81,7 +81,7 @@
             </div>
           </v-card-text>
           <v-card-actions>
-            <v-btn text color="deep-purple accent-4">
+            <v-btn text color="blue lighten-1">
               Learn More <!-- Link to how to page -->
             </v-btn>
           </v-card-actions>
@@ -90,7 +90,7 @@
       <v-col>
         <v-card class="mx-auto" max-width="344">
           <v-card-text>
-            <div>Goal 3</div>
+            <div><p class="blue--text">Goal 3</p></div>
             <p class="display-1 text--primary">
               Goal 3
             </p>
@@ -99,7 +99,7 @@
             </div>
           </v-card-text>
           <v-card-actions>
-            <v-btn text color="deep-purple accent-4">
+            <v-btn text color="blue lighten-1">
               Learn More <!-- Link to how to page -->
             </v-btn>
           </v-card-actions>
@@ -113,7 +113,7 @@
 export default {
   data: () => ({
     goal1: "0/400",
-    goal2: "0/0",
+    goal2: "0/60k",
     goal3: "0/0"
 
   })
