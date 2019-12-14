@@ -1,36 +1,36 @@
 <template>
-  <v-card
-    class="mx-auto"
-    max-width="344"
-    outlined
-  >
-    <v-list-item three-line>
-      <v-list-item-content>
-        <div class="overline mb-4">OVERLINE</div>
-        <v-list-item-title class="headline mb-1">Headline 5</v-list-item-title>
-        <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully</v-list-item-subtitle>
-      </v-list-item-content>
+<div>
+    <v-toolbar dark class="mb-0 pb-0">
+      <router-link to="/" active-class="active" exact>
+        <!-- <a href="#">
+          <img class="logo" src="https://i.imgur.com/a8JzMHo.png" alt />
+        </a> -->
+      </router-link>
 
-      <v-list-item-avatar
-        tile
-        size="80"
-        color="grey"
-      ></v-list-item-avatar>
-    </v-list-item>
+      <v-toolbar-title>Herriman Rose 1st</v-toolbar-title>
 
-    <v-card-actions>
-      <v-btn text>Button</v-btn>
-      <v-btn text>Button</v-btn>
-    </v-card-actions>
-  </v-card>
+      <div class="flex-grow-1"></div>
+
+      <v-toolbar-items>
+
+        <v-divider class="teal darken-3" vertical></v-divider>
+
+        <v-btn to="/" exact text color="teal accent-3">HOME</v-btn>
+
+        <v-divider class="teal darken-3" vertical></v-divider>
+
+        <v-btn to="/build" exact text color="teal accent-3">Sign-Up</v-btn>
+
+        <v-divider class="teal darken-3" vertical></v-divider>
+
+        <v-btn to="/build/complete" exact text color="teal accent-3">Resources</v-btn>
+      </v-toolbar-items>
+    </v-toolbar>
+  </div>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
-<style>
-
-</style>
+<style></style>
