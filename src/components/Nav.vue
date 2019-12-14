@@ -1,6 +1,6 @@
 <template>
 <div>
-    <v-toolbar dark class="mb-0 pb-0">
+    <v-toolbar class="mb-0 pb-0">
       <router-link to="/" active-class="active" exact>
         <!-- <a href="#">
           <img class="logo" src="https://i.imgur.com/a8JzMHo.png" alt />
