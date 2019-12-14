@@ -2,23 +2,25 @@
   <v-app>
     <v-content>
       <app-nav></app-nav>
-      <app-main></app-main>
-      <!-- <HelloWorld/> -->
+      <router-view></router-view>
+      
     </v-content>
   </v-app>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld';
 import Nav from './components/Nav'
-import MainPage from './components/MainPage'
+// import MainPage from './components/MainPage'
+// import Resources from './components/Resources'
+// import SignUp from './components/SignUp'
 
 export default {
   name: 'App',
   components: {
-    // HelloWorld,
     'app-nav': Nav,
-    'app-main': MainPage
+    // 'app-main': MainPage,
+    // 'app-resources': Resources,
+    // 'app-signup': SignUp
   },
 
   data: () => ({
