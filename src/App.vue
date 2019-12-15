@@ -2,7 +2,7 @@
   <v-app>
     <v-content>
       <app-nav></app-nav>
-      <router-view></router-view>
+      <!-- <router-view></router-view> -->
       
     </v-content>
   </v-app>

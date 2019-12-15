@@ -1,60 +1,109 @@
 <template>
-<!-- <div>
-    <v-toolbar dark dense class="mb-0 pb-0">
-      <v-toolbar-title>Herriman Rose 1st</v-toolbar-title>     
-
-      <div class="flex-grow-1"></div>
-
-      <v-toolbar-items>
-        <v-btn to="/" exact text color="blue lighten-2">HOME</v-btn>
-        <v-btn to="/SignUp" exact text color="blue lighten-2">Sign-Up</v-btn>
-        <v-btn to="/Resources" exact text color="blue lighten-2">Resources</v-btn>
-      </v-toolbar-items>
-    </v-toolbar>
-  </div> -->
-  <div>
-    <v-app-bar
-      dense
+  <v-app id="inspire">
+    <v-navigation-drawer
+      v-model="drawer"
+      :clipped="$vuetify.breakpoint.lgAndUp"
+      app
       dark
     >
-      <v-app-bar-nav-icon>
-        <v-btn icon to="/">
-        <v-icon>mdi-home</v-icon>
-      </v-btn>
-      </v-app-bar-nav-icon>
-
-      <v-toolbar-title>Herriman Rose 1st</v-toolbar-title>
-
-      <v-spacer></v-spacer>
-      <v-btn to="/SignUp" exact text color="blue lighten-2">Sign-Up</v-btn>
-
-      <!-- <v-menu
-        left
-        bottom
-      >
-        <template v-slot:activator="{ on }">
-          <v-btn icon v-on="on">
-            <v-icon>mdi-dots-vertical</v-icon>
-          </v-btn>
-        </template>
-
-        <v-list>
-          <v-list-item
-            v-for="n in 5"
-            :key="n"
-            @click="() => {}"
+      <v-list dense>
+        <template v-for="item in items">
+          <v-row v-if="item.heading" :key="item.heading" align="center">
+            <v-col cols="6">
+              <v-subheader v-if="item.heading">
+                {{ item.heading }}
+              </v-subheader>
+            </v-col>
+            <v-col cols="6" class="text-center">
+              <a href="#!" class="body-2 black--text">EDIT</a>
+            </v-col>
+          </v-row>
+          <v-list-group
+            v-else-if="item.children"
+            :key="item.text"
+            v-model="item.model"
+            :prepend-icon="item.model ? item.icon : item['icon-alt']"
+            append-icon=""
           >
-            <v-list-item-title>Option {{ n }}</v-list-item-title>
+            <template v-slot:activator>
+              <v-list-item>
+                <v-list-item-content>
+                  <v-list-item-title>
+                    {{ item.text }}
+                  </v-list-item-title>
+                </v-list-item-content>
+              </v-list-item>
+            </template>
+            <v-list-item v-for="(child, i) in item.children" :key="i" link :to="child.to">
+              <v-list-item-action v-if="child.icon">
+                <v-icon>{{ child.icon }}</v-icon>
+              </v-list-item-action>
+              <v-list-item-content>
+                <v-list-item-title>
+                  {{ child.text }}
+                </v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+          </v-list-group>
+          <v-list-item v-else :key="item.text" link :to="item.to">
+            <v-list-item-action>
+              <v-icon>{{ item.icon }}</v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title>
+                {{ item.text }}
+              </v-list-item-title>
+            </v-list-item-content>
           </v-list-item>
-        </v-list>
-      </v-menu> -->
+        </template>
+      </v-list>
+    </v-navigation-drawer>
+
+    <v-app-bar
+      :clipped-left="$vuetify.breakpoint.lgAndUp"
+      app
+      dark
+    >
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+      <v-toolbar-title style="width: 300px" class="ml-0 pl-4">
+        <span class="hidden-sm-and-down">Herriman Rose 1st</span>
+      </v-toolbar-title>
     </v-app-bar>
-  </div>
+    <v-content class="pt-0">
+      <v-container
+        fluid
+        class="fill-height pt-0">
+        <router-view></router-view>
+      </v-container>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    source: String
+  },
+  data: () => ({
+    dialog: false,
+    drawer: null,
+    items: [
+      { icon: "mdi-home", text: "Home", to: "/" },
+      { icon: "mdi-calendar-arrow-right", text: "Sign-Up", to: "/signUp" },
+      {
+        icon: "mdi-chevron-up",
+        "icon-alt": "mdi-chevron-down",
+        text: "Resources",
+        model: false,
+        children: [
+          { text: "Applications", to: "/apps" },
+          { text: "Indexing", to: "/indexing" },
+          { text: "Finding Names", to: "/finding-names" },
+          { text: "Memories App", to: "/memories" },
+          { text: "Take a Name", to: "/take-a-name" }
+        ]
+      },
+    ]
+  })
+};
 </script>
-
-<style>
-</style>

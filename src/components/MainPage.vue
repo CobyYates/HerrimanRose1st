@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="pt-0">
+  <v-container fluid class="pa-0">
     <v-row align="center" justify="center">
       <v-img src="../assets/hero.jpg" lazy-src="../assets/hero.jpg">
         <div class="d-flex justify-end pr-3">
