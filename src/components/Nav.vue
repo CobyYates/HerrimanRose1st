@@ -8,14 +8,11 @@
     >
       <v-list dense>
         <template v-for="item in items">
-          <v-row v-if="item.heading" :key="item.heading" align="center">
+          <v-row v-if="item.heading" :key="item.heading">
             <v-col cols="6">
               <v-subheader v-if="item.heading">
                 {{ item.heading }}
               </v-subheader>
-            </v-col>
-            <v-col cols="6" class="text-center">
-              <a href="#!" class="body-2 black--text">EDIT</a>
             </v-col>
           </v-row>
           <v-list-group
@@ -62,7 +59,8 @@
     <v-app-bar
       :clipped-left="$vuetify.breakpoint.lgAndUp"
       app
-      dark
+      dark 
+      dense
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title style="width: 300px" class="ml-0 pl-4">
@@ -85,7 +83,6 @@ export default {
     source: String
   },
   data: () => ({
-    dialog: false,
     drawer: null,
     items: [
       { icon: "mdi-home", text: "Home", to: "/" },
@@ -107,3 +104,9 @@ export default {
   })
 };
 </script>
+
+<style scoped>
+.v-content {
+  padding-left: 0!important;
+}
+</style>

@@ -1,8 +1,10 @@
 <template>
-<div>
-    <vue-calendly url="https://calendly.com/cobyyates/family-history-fhe-activity?month=2019-12" :height="600"></vue-calendly>
-</div>
-
+<v-container fluid>
+        <vue-calendly 
+        elevation- url="https://calendly.com/cobyyates/family-history-fhe-activity?month=2019-12" 
+        :height="650">
+        </vue-calendly>    
+</v-container>
 </template>
 
 <script>
