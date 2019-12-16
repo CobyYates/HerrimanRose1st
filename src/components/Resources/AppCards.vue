@@ -22,8 +22,8 @@
     <v-list-item-subtitle class="text-wrap px-4">{{ download.description }}</v-list-item-subtitle>
 
     <v-card-actions>
-      <v-btn text color="blue" :href="download.ios">IOS</v-btn>
-      <v-btn text color="green" :href="download.android">ANDROID</v-btn>
+      <v-btn text color="blue" :href="download.ios" target="_blank">IOS</v-btn>
+      <v-btn text color="green" :href="download.android" target="_blank">ANDROID</v-btn>
     </v-card-actions>
   </v-card>
 </template>
