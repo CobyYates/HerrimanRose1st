@@ -6,7 +6,7 @@
           :rotate="-90"
           :size="150"
           :width="20"
-          :value="30"
+          :value="percent"
           color="blue lighten-1"
         >
           {{ goal1 }}
@@ -25,7 +25,7 @@
             </div>
           </v-card-text>
           <v-card-actions>
-            <v-btn text color="blue lighten-1">
+            <v-btn text @click="test()" color="blue lighten-1">
               Learn More <!-- Link to how to page -->
             </v-btn>
           </v-card-actions>
@@ -36,9 +36,9 @@
 <script>
 export default {
   data: () => ({
-    goal1: "0/400",
-  })
-
+    goal1: "64/406",
+    percent: 16
+  }),
 }
 </script>
 

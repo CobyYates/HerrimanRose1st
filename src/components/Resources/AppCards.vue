@@ -24,6 +24,7 @@
     <v-card-actions>
       <v-btn text color="blue" :href="download.ios" target="_blank">IOS</v-btn>
       <v-btn text color="green" :href="download.android" target="_blank">ANDROID</v-btn>
+      <v-btn text color="green" :href="download.desktop" target="_blank">DESKTOP</v-btn>
     </v-card-actions>
   </v-card>
 </template>
