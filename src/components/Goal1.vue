@@ -36,8 +36,8 @@
 <script>
 export default {
   data: () => ({
-    goal1: "64/406",
-    percent: 16
+    goal1: "82/406",
+    percent: 14
   }),
 }
 </script>
