@@ -50,12 +50,12 @@ export const downloads = [
          anywhere, anytime. Request a headstone photo or snap one yourself and share it instantly. Honor your 
          ancestors by creating memorials. All this and more with just a few taps.`
     },
-    {
-        "title": "",
-        "image": "",
-        "android": "",
-        "ios": "",
-        "desktop": "",
-        "description": ``
-    },
+    // {
+    //     "title": "",
+    //     "image": "",
+    //     "android": "",
+    //     "ios": "",
+    //     "desktop": "",
+    //     "description": ``
+    // },
 ]

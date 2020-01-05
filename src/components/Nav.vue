@@ -31,7 +31,7 @@
                 </v-list-item-content>
               </v-list-item>
             </template>
-            <v-list-item v-for="(child, i) in item.children" :key="i" link :to="child.to">
+            <v-list-item v-for="(child, i) in item.children" :key="i" link :to="child.to" :disabled="child.disabled">
               <v-list-item-action v-if="child.icon">
                 <v-icon>{{ child.icon }}</v-icon>
               </v-list-item-action>
@@ -94,10 +94,10 @@ export default {
         model: false,
         children: [
           { text: "Applications", to: "/apps" },
-          { text: "Indexing", to: "/indexing" },
-          { text: "Finding Names", to: "/finding-names" },
-          { text: "Memories App", to: "/memories" },
-          { text: "Take a Name", to: "/take-a-name" }
+          { text: "Indexing", to: "/indexing", disabled: "true" },
+          { text: "Finding Names", to: "/finding-names", disabled: "true" },
+          { text: "Memories App", to: "/memories", disabled: "true" },
+          { text: "Take a Name", to: "/take-a-name", disabled: "true" }
         ]
       },
     ]
