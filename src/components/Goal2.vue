@@ -36,7 +36,7 @@
 <script>
 export default {
   data: () => ({
-    goal2: "458/60k",
+    goal2: "889/60k",
   })
 
 };
