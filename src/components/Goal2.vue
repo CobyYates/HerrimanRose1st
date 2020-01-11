@@ -6,7 +6,7 @@
         :rotate="-90"
         :size="150"
         :width="20"
-        :value="1"
+        :value="3"
         color="blue lighten-1"
       >
         {{ goal2 }}
@@ -36,7 +36,7 @@
 <script>
 export default {
   data: () => ({
-    goal2: "889/60k",
+    goal2: "1786/60k",
   })
 
 };
