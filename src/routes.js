@@ -10,7 +10,7 @@ import TakeAName from './components/Resources/TakeAName.vue'
 
 export const routes = [
     { path: '', component: MainPage},
-    { path: '/SignUp', component: SignUp},
+    { path: '/schedule', component: SignUp},
     { path: '/Resources', component: Resources},
     { path: '/apps', component: Applications},
     { path: '/indexing', component: Indexing},

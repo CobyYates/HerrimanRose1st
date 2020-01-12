@@ -86,7 +86,7 @@ export default {
     drawer: null,
     items: [
       { icon: "mdi-home", text: "Home", to: "/" },
-      { icon: "mdi-calendar-arrow-right", text: "Sign-Up", to: "/signUp" },
+      { icon: "mdi-calendar-arrow-right", text: "Schedule", to: "/schedule" },
       {
         icon: "mdi-chevron-up",
         "icon-alt": "mdi-chevron-down",

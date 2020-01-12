@@ -1,12 +1,12 @@
 <template>
   <v-container class="d-flex flex-column align-center">
     <div class="text-center pb-8">
-      <h3>Goal 3</h3>
+      <h3>Members Who Added Memory</h3>
       <v-progress-circular
         :rotate="-90"
         :size="150"
         :width="20"
-        :value="10"
+        :value="1"
         color="blue lighten-1"
       >
         {{ goal3 }}
@@ -17,13 +17,13 @@
       <v-card-text>
         <div><p class="blue--text">Goal 3</p></div>
         <p class="display-1">
-          Goal 3
+          Memories
         </p>
-        <di>Goal <strong>3</strong> .</di>
+        <div><strong>30%</strong> of ward to add a new memory to the Memories App</div>
       </v-card-text>
       <v-card-actions>
         <v-btn text color="blue lighten-1">
-          Learn More
+          <!-- Learn More -->
           <!-- Link to how to page -->
         </v-btn>
       </v-card-actions>

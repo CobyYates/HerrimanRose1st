@@ -1,12 +1,12 @@
 <template>
   <v-container class="d-flex flex-column align-center">
     <div class="text-center pb-8">
-      <h3>Number of records indexed</h3>
+      <h3>Names Submitted to the Temple</h3>
       <v-progress-circular
         :rotate="-90"
         :size="150"
         :width="20"
-        :value="3"
+        :value="1"
         color="blue lighten-1"
       >
         {{ goal2 }}
@@ -20,12 +20,12 @@
             Ward Indexing
           </p>
           <div>
-            As a Ward, index <strong>60,000</strong> records this year.
+            <strong>30%</strong> of the Ward to submit a name to the Temple
           </div>
         </v-card-text>
         <v-card-actions>
           <v-btn text color="blue lighten-1">
-            Learn More
+            <!-- Learn More -->
             <!-- Link to how to page -->
           </v-btn>
         </v-card-actions>
@@ -36,7 +36,7 @@
 <script>
 export default {
   data: () => ({
-    goal2: "1786/60k",
+    goal2: "0/0",
   })
 
 };
